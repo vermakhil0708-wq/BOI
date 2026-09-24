@@ -1,0 +1,26 @@
+"""Add two numbers entered by the user."""
+
+
+def add_numbers(first: float, second: float) -> float:
+	"""Return the sum of two numbers."""
+	return first + second
+
+
+def read_number(prompt: str) -> float:
+	"""Read and validate a number from standard input."""
+	while True:
+		try:
+			return float(input(prompt))
+		except ValueError:
+			print("Please enter a valid number.")
+
+
+def main() -> None:
+	"""Read two numbers and display their sum."""
+	first = read_number("Enter the first number: ")
+	second = read_number("Enter the second number: ")
+	print(f"Sum: {add_numbers(first, second)}")
+
+
+if __name__ == "__main__":
+	main()
